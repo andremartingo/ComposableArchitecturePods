@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint swift-case-paths.podspec' to ensure this is a
+#  Be sure to run `pod spec lint swift-composable-architecture.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -15,9 +15,9 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "OrderedCollections"
-  spec.version      = "1.0.2"
-  spec.summary      = "Swift Collections is an open-source package of data structure implementations for the Swift programming language."
+  spec.name         = "Dependencies1"
+  spec.version      = "0.47.2"
+  spec.summary      = "A library for building applications in a consistent and understandable way, with composition, testing, and ergonomics in mind."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,11 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  Swift Collections is an open-source package of data structure implementations for the Swift programming language.
+  The Composable Architecture (TCA, for short) is a library for building applications in a consistent and understandable way,
+  with composition, testing, and ergonomics in mind. It can be used in SwiftUI, UIKit, and more, and on any Apple platform (iOS, macOS, tvOS, and watchOS).
                    DESC
 
-  spec.homepage     = "https://github.com/apple/swift-collections"
+  spec.homepage     = "https://www.pointfree.co/collections/composable-architecture"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,7 +40,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  #spec.license      = { :type => "MIT", :file => "LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,7 +53,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "Apple" => "support@apple.com" }
+  spec.author             = { "Point-Free" => "support@pointfree.co" }
   # Or just: spec.author    = "Point-Free"
   # spec.authors            = { "Point-Free" => "support@pointfree.co" }
   # spec.social_media_url   = "https://twitter.com/Point-Free"
@@ -68,10 +69,10 @@ Pod::Spec.new do |spec|
 
   #  When using multiple platforms
   spec.ios.deployment_target = "15.0"
-  spec.osx.deployment_target = "10.15"
-  spec.watchos.deployment_target = "6.0"
-  spec.tvos.deployment_target = "13.0"
-  spec.swift_version = '5.7'
+  # spec.osx.deployment_target = "10.15"
+  # spec.watchos.deployment_target = "6.0"
+  # spec.tvos.deployment_target = "13.0"
+  # spec.swift_version = '5.7'
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -80,7 +81,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/apple/swift-collections.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/pointfreeco/swift-composable-architecture.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +92,9 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Sources/OrderedCollections/**/*.swift"
+  spec.source_files  = "Sources/Dependencies/**/*.swift"
+  spec.module_name = "Dependencies"
+  
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -108,7 +111,6 @@ Pod::Spec.new do |spec|
   # spec.resources = "Resources/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -132,5 +134,8 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+  spec.dependency "Clocks", "~> 0.1.4"
+  spec.dependency "CombineSchedulers", "~> 0.8.0"
+  spec.dependency "XCTestDynamicOverlay", "~> 0.5.0"
+
 end

@@ -15,9 +15,9 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "CustomDump"
-  spec.version      = "0.6.0"
-  spec.summary      = "A collection of tools for debugging, diffing, and testing your application's data structures."
+  spec.name         = "Clocks"
+  spec.version      = "0.2.0"
+  spec.summary      = "The Clock protocol in Swift provides a powerful abstraction for time-based asynchrony in Swift's structured concurrency."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  A collection of tools for debugging, diffing, and testing your application's data structures.
+  The Clock protocol in Swift provides a powerful abstraction for time-based asynchrony in Swift's structured concurrency.
                    DESC
 
-  spec.homepage     = "https://github.com/pointfreeco/swift-custom-dump"
+  spec.homepage     = "https://github.com/pointfreeco/swift-clocks"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,7 +39,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  #spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/pointfreeco/swift-custom-dump.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/pointfreeco/swift-clocks.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

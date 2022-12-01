@@ -15,9 +15,9 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "Clocks"
-  spec.version      = "0.1.4"
-  spec.summary      = "The Clock protocol in Swift provides a powerful abstraction for time-based asynchrony in Swift's structured concurrency."
+  spec.name         = "CasePaths"
+  spec.version      = "0.10.1"
+  spec.summary      = "🧰 Case paths bring the power and ergonomics of key paths to enums!"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  The Clock protocol in Swift provides a powerful abstraction for time-based asynchrony in Swift's structured concurrency.
+  Case paths bring the power and ergonomics of key paths to enums!
                    DESC
 
-  spec.homepage     = "https://github.com/pointfreeco/swift-clocks"
+  spec.homepage     = "https://www.pointfree.co/episodes/ep87-the-case-for-case-paths-introduction"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,7 +39,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  #spec.license      = { :type => "MIT", :file => "LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -68,10 +68,11 @@ Pod::Spec.new do |spec|
 
   #  When using multiple platforms
   spec.ios.deployment_target = "15.0"
-  spec.osx.deployment_target = "10.15"
-  spec.watchos.deployment_target = "6.0"
-  spec.tvos.deployment_target = "13.0"
+  #spec.osx.deployment_target = "10.15"
+  #spec.watchos.deployment_target = "6.0"
+  #spec.tvos.deployment_target = "13.0"
   spec.swift_version = '5.7'
+  
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -80,7 +81,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/pointfreeco/swift-clocks.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/pointfreeco/swift-case-paths.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +92,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Sources/**/*.swift"
+  spec.source_files  = "Sources/CasePaths/*.swift"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -133,5 +134,5 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-  spec.dependency "XCTestDynamicOverlay", "~> 0.5.0"
+
 end
